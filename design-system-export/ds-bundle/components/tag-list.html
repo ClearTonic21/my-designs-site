@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" name="Tags & TagList" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tags &amp; TagList</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #1a1a1a; --subtle: #2c2c2c; --text2: #d6cbb5; --accent: #38eeb4; --border: rgba(240,237,230,0.08); --p: 'DM Sans', sans-serif; }
+    * { box-sizing: border-box; margin: 0; }
+    body { background: var(--bg); color: var(--text2); font-family: var(--p); padding: 48px; display: flex; flex-direction: column; gap: 32px; }
+    .eyebrow { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #fff; margin-bottom: 12px; }
+    .accent { color: var(--accent); }
+    .items { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 999px; background: var(--subtle); color: var(--text2); border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="eyebrow">Design<span class="accent">_</span></div>
+    <div class="items"><span class="tag">Figma</span><span class="tag">UI &amp; UX Patterns</span><span class="tag">Accessibility</span><span class="tag">Responsive Design</span></div>
+  </div>
+  <div>
+    <div class="eyebrow">Frontend<span class="accent">_</span></div>
+    <div class="items"><span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">SCSS</span></div>
+  </div>
+  <div>
+    <div class="eyebrow">Tooling<span class="accent">_</span></div>
+    <div class="items"><span class="tag">Claude AI</span><span class="tag">ServiceNow</span><span class="tag">JIRA</span><span class="tag">Git</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+{
+  "$description": "Eli Philpott / ClearTonic design tokens, extracted from src/styles/tokens.scss + typography.scss. Semantic color tokens carry four resolved modes under $extensions.modes — these map 1:1 onto Figma Variable modes in a single 'Color' collection. Primitive palette is the raw value set; the Figma build aliases semantics to primitives (see figma-build-plan.md). Color $values are #RRGGBBAA. This is the canonical interchange artifact for the UI kit.",
+  "$modes": ["Dark", "Light", "High Contrast", "Light High Contrast"],
+
+  "primitive": {
+    "$description": "Raw palette — one mode ('Value'). Hidden scope in Figma; semantics alias to these.",
+    "teal": {
+      "accent":  { "$type": "color", "$value": "#38EEB4FF" },
+      "hover":   { "$type": "color", "$value": "#1ABFA0FF" },
+      "bright":  { "$type": "color", "$value": "#D7FCF0FF" }
+    },
+    "jade": {
+      "base":    { "$type": "color", "$value": "#08755BFF" },
+      "hover":   { "$type": "color", "$value": "#066249FF" },
+      "deep":    { "$type": "color", "$value": "#005C44FF" },
+      "deepest": { "$type": "color", "$value": "#00432FFF" }
+    },
+    "gold": {
+      "dark":    { "$type": "color", "$value": "#C9A227FF" },
+      "light":   { "$type": "color", "$value": "#8A6D12FF" },
+      "hc-dark": { "$type": "color", "$value": "#E8BE3FFF" },
+      "hc-light":{ "$type": "color", "$value": "#5E4A00FF" },
+      "peak":    { "$type": "color", "$value": "#FFE164FF" },
+      "peak-light": { "$type": "color", "$value": "#AA841AFF" }
+    },
+    "charcoal": {
+      "900": { "$type": "color", "$value": "#1A1A1AFF" },
+      "850": { "$type": "color", "$value": "#232323FF" },
+      "800": { "$type": "color", "$value": "#2C2C2CFF" },
+      "hc-900": { "$type": "color", "$value": "#000000FF" },
+      "hc-850": { "$type": "color", "$value": "#0A0A0AFF" },
+      "hc-800": { "$type": "color", "$value": "#161616FF" }
+    },
+    "bone": {
+      "primary":   { "$type": "color", "$value": "#F0EDE6FF" },
+      "secondary": { "$type": "color", "$value": "#D6CBB5FF" }
+    },
+    "paper": {
+      "background": { "$type": "color", "$value": "#EFEAE0FF" },
+      "surface":    { "$type": "color", "$value": "#FAF8F3FF" },
+      "subtle":     { "$type": "color", "$value": "#E4DED1FF" },
+      "inverted":   { "$type": "color", "$value": "#F8F6F0FF" },
+      "ink":        { "$type": "color", "$value": "#1F1D1AFF" },
+      "ink-soft":   { "$type": "color", "$value": "#5A5348FF" },
+      "hc-subtle":  { "$type": "color", "$value": "#EDEDEDFF" }
+    },
+    "pure": {
+      "black": { "$type": "color", "$value": "#000000FF" },
+      "white": { "$type": "color", "$value": "#FFFFFFFF" }
+    },
+    "signal": {
+      "error": { "$type": "color", "$value": "#FF6B6BFF" }
+    }
+  },
+
+  "color": {
+    "$description": "Semantic tokens. Each maps to a Figma variable; mode order is Dark / Light / High Contrast / Light High Contrast. Code-syntax (WEB) must be var(--<name>).",
+    "background": {
+      "$type": "color", "$extensions": { "web": "var(--background)", "modes": {
+        "Dark": "#1A1A1AFF", "Light": "#EFEAE0FF", "High Contrast": "#000000FF", "Light High Contrast": "#FFFFFFFF" } } },
+    "background-surface": {
+      "$type": "color", "$extensions": { "web": "var(--background-surface)", "modes": {
+        "Dark": "#232323FF", "Light": "#FAF8F3FF", "High Contrast": "#0A0A0AFF", "Light High Contrast": "#FFFFFFFF" } } },
+    "background-subtle": {
+      "$type": "color", "$extensions": { "web": "var(--background-subtle)", "modes": {
+        "Dark": "#2C2C2CFF", "Light": "#E4DED1FF", "High Contrast": "#161616FF", "Light High Contrast": "#EDEDEDFF" } } },
+    "background-overlay": {
+      "$type": "color", "$extensions": { "web": "var(--background-overlay)", "modes": {
+        "Dark": "#1A1A1ACC", "Light": "#302F2CD1", "High Contrast": "#000000EB", "Light High Contrast": "#000000EB" } } },
+    "text-primary": {
+      "$type": "color", "$extensions": { "web": "var(--text-primary)", "modes": {
+        "Dark": "#F0EDE6FF", "Light": "#1F1D1AFF", "High Contrast": "#FFFFFFFF", "Light High Contrast": "#000000FF" } } },
+    "text-secondary": {
+      "$type": "color", "$extensions": { "web": "var(--text-secondary)", "modes": {
+        "Dark": "#D6CBB5FF", "Light": "#5A5348FF", "High Contrast": "#FFFFFFFF", "Light High Contrast": "#000000FF" } } },
+    "text-inverted": {
+      "$type": "color", "$extensions": { "web": "var(--text-inverted)", "modes": {
+        "Dark": "#1A1A1AFF", "Light": "#F8F6F0FF", "High Contrast": "#000000FF", "Light High Contrast": "#FFFFFFFF" } } },
+    "accent": {
+      "$type": "color", "$extensions": { "web": "var(--accent)", "modes": {
+        "Dark": "#38EEB4FF", "Light": "#08755BFF", "High Contrast": "#38EEB4FF", "Light High Contrast": "#005C44FF" } } },
+    "accent-hover": {
+      "$type": "color", "$extensions": { "web": "var(--accent-hover)", "modes": {
+        "Dark": "#1ABFA0FF", "Light": "#066249FF", "High Contrast": "#1ABFA0FF", "Light High Contrast": "#00432FFF" } } },
+    "accent-bright": {
+      "$type": "color", "$extensions": { "web": "var(--accent-bright)", "modes": {
+        "Dark": "#D7FCF0FF", "Light": "#066249FF", "High Contrast": "#D7FCF0FF", "Light High Contrast": "#00432FFF" } } },
+    "accent-glow": {
+      "$type": "color", "$extensions": { "web": "var(--accent-glow)", "modes": {
+        "Dark": "#38EEB426", "Light": "#08755B2E", "High Contrast": "#38EEB44D", "Light High Contrast": "#005C4438" } } },
+    "border-default": {
+      "$type": "color", "$extensions": { "web": "var(--border-default)", "modes": {
+        "Dark": "#F0EDE614", "Light": "#1F1D1A1F", "High Contrast": "#FFFFFF8C", "Light High Contrast": "#00000099" } } },
+    "border-accent": {
+      "$type": "color", "$extensions": { "web": "var(--border-accent)", "modes": {
+        "Dark": "#38EEB44D", "Light": "#08755B59", "High Contrast": "#38EEB4CC", "Light High Contrast": "#005C44CC" } } },
+    "gold": {
+      "$type": "color", "$extensions": { "web": "var(--gold)", "modes": {
+        "Dark": "#C9A227FF", "Light": "#8A6D12FF", "High Contrast": "#E8BE3FFF", "Light High Contrast": "#5E4A00FF" } } },
+    "gold-border": {
+      "$type": "color", "$extensions": { "web": "var(--gold-border)", "modes": {
+        "Dark": "#C9A22759", "Light": "#8A6D1266", "High Contrast": "#E8BE3FB3", "Light High Contrast": "#5E4A00B3" } } },
+    "error": {
+      "$type": "color", "$extensions": { "web": "var(--error)", "modes": {
+        "Dark": "#FF6B6BFF", "Light": "#FF6B6BFF", "High Contrast": "#FF6B6BFF", "Light High Contrast": "#FF6B6BFF" } } },
+    "eyebrow": {
+      "$type": "color", "$extensions": { "web": "var(--eyebrow-color)", "modes": {
+        "Dark": "#FFFFFFFF", "Light": "#000000FF", "High Contrast": "#FFFFFFFF", "Light High Contrast": "#000000FF" } } },
+    "gold-fade": {
+      "$type": "color", "$extensions": { "web": "var(--gold-fade)", "modes": {
+        "Dark": "#644B0A1A", "Light": "#6E550A40", "High Contrast": "#644B0A1A", "Light High Contrast": "#6E550A40" } } },
+    "gold-mid": {
+      "$type": "color", "$extensions": { "web": "var(--gold-mid)", "modes": {
+        "Dark": "#C9A227B3", "Light": "#8A6D12E6", "High Contrast": "#C9A227B3", "Light High Contrast": "#8A6D12E6" } } },
+    "gold-peak": {
+      "$type": "color", "$extensions": { "web": "var(--gold-peak)", "modes": {
+        "Dark": "#FFE164FF", "Light": "#AA841AFF", "High Contrast": "#FFE164FF", "Light High Contrast": "#AA841AFF" } } },
+    "teal-fade": {
+      "$type": "color", "$extensions": { "web": "var(--teal-fade)", "modes": {
+        "Dark": "#38EEB40D", "Light": "#38EEB40D", "High Contrast": "#38EEB40D", "Light High Contrast": "#38EEB40D" } } },
+    "teal-mid": {
+      "$type": "color", "$extensions": { "web": "var(--teal-mid)", "modes": {
+        "Dark": "#38EEB4B3", "Light": "#38EEB4B3", "High Contrast": "#38EEB4B3", "Light High Contrast": "#38EEB4B3" } } },
+    "teal-peak": {
+      "$type": "color", "$extensions": { "web": "var(--teal-peak)", "modes": {
+        "Dark": "#38EEB4FF", "Light": "#38EEB4FF", "High Contrast": "#38EEB4FF", "Light High Contrast": "#38EEB4FF" } } }
+  },
+
+  "spacing": {
+    "$description": "8px base grid. Single mode. Scope: GAP + WIDTH_HEIGHT in Figma.",
+    "1":  { "$type": "dimension", "$value": "8px",   "$extensions": { "web": "var(--spacing-unit)" } },
+    "2":  { "$type": "dimension", "$value": "16px",  "$extensions": { "web": "16px" } },
+    "3":  { "$type": "dimension", "$value": "24px",  "$extensions": { "web": "24px" } },
+    "4":  { "$type": "dimension", "$value": "32px",  "$extensions": { "web": "32px" } },
+    "6":  { "$type": "dimension", "$value": "48px",  "$extensions": { "web": "48px" } },
+    "8":  { "$type": "dimension", "$value": "64px",  "$extensions": { "web": "64px" } },
+    "12": { "$type": "dimension", "$value": "96px",  "$extensions": { "web": "96px" } },
+    "16": { "$type": "dimension", "$value": "128px", "$extensions": { "web": "128px" } }
+  },
+
+  "radius": {
+    "$description": "Single mode. Scope: CORNER_RADIUS.",
+    "sm":   { "$type": "dimension", "$value": "4px" },
+    "md":   { "$type": "dimension", "$value": "8px" },
+    "lg":   { "$type": "dimension", "$value": "16px" },
+    "pill": { "$type": "dimension", "$value": "999px" }
+  },
+
+  "border-width": {
+    "$description": "metallic-border-width is mode-aware (thicker in light themes). Scope: STROKE_FLOAT.",
+    "metallic": {
+      "$type": "dimension", "$extensions": { "web": "var(--metallic-border-width)", "modes": {
+        "Dark": "2px", "Light": "4px", "High Contrast": "2px", "Light High Contrast": "4px" } } },
+    "hairline": { "$type": "dimension", "$value": "1px" }
+  },
+
+  "breakpoint": {
+    "$description": "Min-width breakpoints (mobile-first). Reference only — not bound to nodes.",
+    "medium":         { "$type": "dimension", "$value": "960px" },
+    "large":          { "$type": "dimension", "$value": "1024px" },
+    "xlarge":         { "$type": "dimension", "$value": "1280px" },
+    "height-compact": { "$type": "dimension", "$value": "500px" }
+  },
+
+  "layout": {
+    "content-max-width": { "$type": "dimension", "$value": "1200px" },
+    "sidebar-width":     { "$type": "dimension", "$value": "16vw", "$extensions": { "note": "viewport-relative; store as 180px nominal in Figma" } },
+    "collapsed-width":   { "$type": "dimension", "$value": "32px" }
+  },
+
+  "typography": {
+    "$description": "Two families only. clamp() resolved to min/max px at 16px root for Figma text styles (Figma can't store clamp). Eyebrow weight is mode-aware.",
+    "font-family": {
+      "primary": { "$type": "fontFamily", "$value": "DM Sans", "$extensions": { "weights": [400, 500, 700, 900], "axes": "opsz 9..40", "use": "all headings, labels, UI, tags" } },
+      "body":    { "$type": "fontFamily", "$value": "Lora",    "$extensions": { "weights": [400, 600], "italic": [400], "use": "body copy only" } }
+    },
+    "weight": {
+      "eyebrow": { "$type": "number", "$extensions": { "web": "var(--type-eyebrow-weight)", "modes": {
+        "Dark": 700, "Light": 900, "High Contrast": 700, "Light High Contrast": 900 } } }
+    },
+    "style": {
+      "display":  { "fontFamily": "DM Sans", "weight": 900, "sizeMin": 72,   "sizeMax": 152, "lineHeight": 0.92, "letterSpacing": "-0.02em", "case": "uppercase" },
+      "eyebrow":  { "fontFamily": "DM Sans", "weight": "{typography.weight.eyebrow}", "sizeMin": 13, "sizeMax": 15, "lineHeight": "normal", "letterSpacing": "0.22em", "case": "uppercase" },
+      "heading":  { "fontFamily": "DM Sans", "weight": 700, "sizeMin": 19,   "sizeMax": 26,  "lineHeight": 1.15, "letterSpacing": "-0.01em", "case": "none" },
+      "subtitle": { "fontFamily": "DM Sans", "weight": 700, "sizeMin": 19,   "sizeMax": 26,  "lineHeight": 1.15, "letterSpacing": "-0.01em", "case": "none", "color": "{color.accent}" },
+      "body":     { "fontFamily": "Lora",    "weight": 400, "sizeMin": 15,   "sizeMax": 17,  "lineHeight": 1.78, "letterSpacing": "normal", "case": "none" },
+      "caption":  { "fontFamily": "DM Sans", "weight": 600, "sizeMin": 11.5, "sizeMax": 11.5,"lineHeight": "normal", "letterSpacing": "0.08em", "case": "none" }
+    }
+  },
+
+  "motion": {
+    "$description": "Documented for handoff; not Figma variables. Never use transition: all.",
+    "duration": {
+      "fast":   { "$type": "duration", "$value": "150ms" },
+      "base":   { "$type": "duration", "$value": "300ms" },
+      "slow":   { "$type": "duration", "$value": "600ms" },
+      "reveal": { "$type": "duration", "$value": "700ms" }
+    },
+    "easing": {
+      "out-expo": { "$type": "cubicBezier", "$value": [0.16, 1, 0.3, 1] },
+      "standard": { "$type": "cubicBezier", "$value": [0.4, 0, 0.2, 1] }
+    }
+  },
+
+  "effect": {
+    "accent-glow": {
+      "$type": "shadow",
+      "$value": { "color": "{color.accent-glow}", "offsetX": "0", "offsetY": "0", "blur": "24px", "spread": "0" },
+      "$extensions": { "note": "surface--accent-highlight box-shadow; create as a Figma effect style bound to color.accent-glow" }
+    }
+  }
+}

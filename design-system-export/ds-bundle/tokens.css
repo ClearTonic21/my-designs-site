@@ -1,0 +1,117 @@
+/* ClearTonic UI Kit — design tokens as CSS custom properties.
+   Mirrors src/styles/tokens.scss. Four modes: default (dark), [data-theme="light"],
+   [data-high-contrast="true"], and the light+HC combination. Drop this into the new PWA
+   as the foundation layer — every component reads from these vars. */
+
+:root {
+  --background: #1a1a1a;
+  --background-surface: #232323;
+  --background-subtle: #2c2c2c;
+  --background-overlay: rgba(26, 26, 26, 0.8);
+  --text-primary: #f0ede6;
+  --text-secondary: #d6cbb5;
+  --text-inverted: #1a1a1a;
+  --accent: #38eeb4;
+  --accent-hover: #1abfa0;
+  --accent-bright: #d7fcf0;
+  --accent-glow: rgba(56, 238, 180, 0.15);
+  --border-default: rgba(240, 237, 230, 0.08);
+  --border-accent: rgba(56, 238, 180, 0.3);
+  --gold: #c9a227;
+  --gold-border: rgba(201, 162, 39, 0.35);
+  --error: #ff6b6b;
+  --eyebrow-color: #ffffff;
+  --type-eyebrow-weight: 700;
+  --metallic-border-width: 2px;
+
+  --gold-fade: rgba(100, 75, 10, 0.1);
+  --gold-mid: rgba(201, 162, 39, 0.7);
+  --gold-peak: rgba(255, 225, 100, 1);
+  --teal-fade: rgba(56, 238, 180, 0.05);
+  --teal-mid: rgba(56, 238, 180, 0.7);
+  --teal-peak: rgba(56, 238, 180, 1);
+
+  --font-primary: 'DM Sans', sans-serif;
+  --font-body: 'Lora', serif;
+
+  --spacing-unit: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-6: 48px;
+  --spacing-8: 64px;
+  --spacing-12: 96px;
+  --spacing-16: 128px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --content-max-width: 1200px;
+
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+  --duration-reveal: 700ms;
+  --easing-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='light'] {
+  --background: #efeae0;
+  --background-surface: #faf8f3;
+  --background-subtle: #e4ded1;
+  --background-overlay: rgba(48, 47, 44, 0.82);
+  --text-primary: #1f1d1a;
+  --text-secondary: #5a5348;
+  --text-inverted: #f8f6f0;
+  --accent: #08755b;
+  --accent-hover: #066249;
+  --accent-bright: #066249;
+  --accent-glow: rgba(8, 117, 91, 0.18);
+  --border-default: rgba(31, 29, 26, 0.12);
+  --border-accent: rgba(8, 117, 91, 0.35);
+  --gold: #8a6d12;
+  --gold-border: rgba(138, 109, 18, 0.4);
+  --gold-fade: rgba(110, 85, 10, 0.25);
+  --gold-mid: rgba(138, 109, 18, 0.9);
+  --gold-peak: rgba(170, 132, 26, 1);
+  --metallic-border-width: 4px;
+  --type-eyebrow-weight: 900;
+  --eyebrow-color: #000000;
+}
+
+[data-high-contrast='true'] {
+  --background: #000000;
+  --background-surface: #0a0a0a;
+  --background-subtle: #161616;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --text-inverted: #000000;
+  --accent-glow: rgba(56, 238, 180, 0.3);
+  --border-default: rgba(255, 255, 255, 0.55);
+  --border-accent: rgba(56, 238, 180, 0.8);
+  --gold: #e8be3f;
+  --gold-border: rgba(232, 190, 63, 0.7);
+  --background-overlay: rgba(0, 0, 0, 0.92);
+  --eyebrow-color: #ffffff;
+}
+
+[data-theme='light'][data-high-contrast='true'] {
+  --background: #ffffff;
+  --background-surface: #ffffff;
+  --background-subtle: #ededed;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --text-inverted: #ffffff;
+  --accent: #005c44;
+  --accent-hover: #00432f;
+  --accent-bright: #00432f;
+  --accent-glow: rgba(0, 92, 68, 0.22);
+  --border-default: rgba(0, 0, 0, 0.6);
+  --border-accent: rgba(0, 92, 68, 0.8);
+  --gold: #5e4a00;
+  --gold-border: rgba(94, 74, 0, 0.7);
+  --eyebrow-color: #000000;
+}

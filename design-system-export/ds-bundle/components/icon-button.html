@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" name="Icon buttons" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icon buttons</title>
+  <style>
+    :root { --bg: #1a1a1a; --text: #f0ede6; --text2: #d6cbb5; --accent: #38eeb4; --border: rgba(240,237,230,0.08); --border-accent: rgba(56,238,180,0.3); }
+    * { box-sizing: border-box; margin: 0; }
+    body { background: var(--bg); color: var(--text); padding: 48px; display: flex; gap: 20px; align-items: center; }
+    .icon-button {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; border-radius: 8px;
+      background: transparent; border: 1px solid var(--border); color: var(--text); cursor: pointer;
+      transition: color 300ms cubic-bezier(0.16,1,0.3,1), border-color 300ms cubic-bezier(0.16,1,0.3,1);
+    }
+    .icon-button:hover { color: var(--accent); border-color: var(--border-accent); }
+    .icon-button svg { width: 20px; height: 20px; }
+  </style>
+</head>
+<body>
+  <button class="icon-button" aria-label="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button>
+  <button class="icon-button" aria-label="Reduce motion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9" stroke-dasharray="4 4"/></svg></button>
+  <button class="icon-button" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  <button class="icon-button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</body>
+</html>

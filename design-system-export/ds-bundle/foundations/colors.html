@@ -1,0 +1,45 @@
+<!-- @dsCard group="Foundations" name="Color — semantic palette" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color — semantic palette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background: #1a1a1a; --background-surface: #232323; --background-subtle: #2c2c2c;
+      --text-primary: #f0ede6; --text-secondary: #d6cbb5;
+      --accent: #38eeb4; --gold: #c9a227; --error: #ff6b6b;
+      --border-default: rgba(240, 237, 230, 0.08);
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif; background: var(--background);
+      color: var(--text-primary); padding: 32px; min-height: 100vh;
+    }
+    h1 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+    .swatches { display: flex; flex-wrap: wrap; gap: 16px; }
+    .swatch { display: flex; flex-direction: column; width: 148px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-default); background: var(--background-surface); }
+    .chip { height: 72px; }
+    .meta { padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+    .name { font-size: 0.78rem; font-weight: 700; }
+    .hex { font-size: 0.7rem; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.04em; }
+  </style>
+</head>
+<body>
+  <h1>Color<span style="color:var(--accent)">_</span></h1>
+  <div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#38eeb4"></div><div class="meta"><span class="name">Accent</span><span class="hex">#38EEB4</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#1abfa0"></div><div class="meta"><span class="name">Accent Hover</span><span class="hex">#1ABFA0</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#1a1a1a"></div><div class="meta"><span class="name">Background</span><span class="hex">#1A1A1A</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#232323"></div><div class="meta"><span class="name">Surface</span><span class="hex">#232323</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#f0ede6"></div><div class="meta"><span class="name">Text Primary</span><span class="hex">#F0EDE6</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#d6cbb5"></div><div class="meta"><span class="name">Text Secondary</span><span class="hex">#D6CBB5</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#c9a227"></div><div class="meta"><span class="name">Gold (border)</span><span class="hex">#C9A227</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#ff6b6b"></div><div class="meta"><span class="name">Error</span><span class="hex">#FF6B6B</span></div></div>
+  </div>
+</body>
+</html>
