@@ -20,7 +20,7 @@ Showcases Eli's personal projects and indie game development. The most visually 
 
 ## Projects (display order)
 1. **ClearTonic Games_** — indie game design & development — image `assets/images/game_screenshot.png` — links to the GitHub profile
-2. **Canopy Trails** — trail/nature-spot information organizer — image `assets/images/app_screenshot.png` — "Coming Soon" (`#` placeholder, no navigation)
+2. **ClearForest_** — local-first knowledge-management PWA / codex builder — image `assets/images/clearforest-preview.png` — "Coming Soon" (`#` placeholder, no navigation)
 3. **This Portfolio Site** — AI-directed Angular 20 development — no image (placeholder shown) — links to source on GitHub
 
 ## Data Model
