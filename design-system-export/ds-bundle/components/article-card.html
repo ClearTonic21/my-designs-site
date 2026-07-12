@@ -1,0 +1,48 @@
+<!-- @dsCard group="Components" name="Article card" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&family=Lora:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1a1a1a; --surface: #232323; --subtle: #2c2c2c; --text: #f0ede6; --text2: #d6cbb5; --accent: #38eeb4;
+      --border: rgba(240,237,230,0.08); --accent-glow: rgba(56,238,180,0.15);
+      --gold-fade: rgba(100,75,10,0.1); --gold-mid: rgba(201,162,39,0.7); --gold-peak: rgba(255,225,100,1);
+      --teal-fade: rgba(56,238,180,0.05); --teal-mid: rgba(56,238,180,0.7); --teal-peak: rgba(56,238,180,1);
+      --p: 'DM Sans', sans-serif; --b: 'Lora', serif;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body { background: var(--bg); color: var(--text); font-family: var(--p); padding: 48px; }
+    .article-card {
+      max-width: 360px; display: flex; flex-direction: column; gap: 16px; padding: 32px; border-radius: 16px;
+      background: var(--surface); border: 2px solid transparent;
+      border-image: linear-gradient(135deg, var(--gold-fade), var(--gold-mid), var(--gold-peak)) 1;
+      transition: transform 300ms cubic-bezier(0.16,1,0.3,1), box-shadow 300ms cubic-bezier(0.16,1,0.3,1), border-image 300ms;
+    }
+    .article-card:hover { transform: translateY(-3px); box-shadow: 0 0 24px var(--accent-glow); border-image: linear-gradient(135deg, var(--teal-fade), var(--teal-mid), var(--teal-peak)) 1; }
+    .media { height: 150px; border-radius: 8px; background: var(--subtle); display: flex; align-items: center; justify-content: center; color: var(--text2); font-size: 0.7rem; letter-spacing: 0.08em; }
+    .eyebrow { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #fff; }
+    .heading { font-weight: 700; font-size: 1.5rem; line-height: 1.15; letter-spacing: -0.01em; }
+    .items { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 999px; background: var(--subtle); color: var(--text2); border: 1px solid var(--border); }
+    .body { font-family: var(--b); font-size: 1rem; line-height: 1.78; }
+    .cta { position: relative; align-self: flex-start; font-weight: 600; color: var(--accent); text-decoration: none; }
+    .accent { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <article class="article-card">
+    <div class="media">GAME SCREENSHOT</div>
+    <span class="eyebrow">Indie<span class="accent">_</span></span>
+    <h3 class="heading">ClearTonic Games<span class="accent">_</span></h3>
+    <div class="items"><span class="tag">Godot / Unity</span><span class="tag">Game Design</span></div>
+    <p class="body">Indie game design &amp; development — polished, well-structured games under the ClearTonic banner.</p>
+    <a class="cta" href="#">View on GitHub &#8599;</a>
+  </article>
+</body>
+</html>
