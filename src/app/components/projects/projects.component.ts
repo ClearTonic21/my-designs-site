@@ -67,8 +67,8 @@ export class ProjectsComponent {
       imageAlt: 'Screenshot of the ClearForest_ codex builder app',
       imagePosition: 'bottom',
       tags: ['Angular 20', 'TypeScript', 'SCSS', 'AI-Directed Dev'],
-      linkHref: '#',
-      linkLabel: 'Coming Soon',
+      linkHref: 'clearforest-codex.html',
+      linkLabel: 'Preview the Design',
     },
     {
       id: 'portfolio-site',

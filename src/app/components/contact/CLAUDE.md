@@ -28,7 +28,7 @@ The three links are `app-text-link`s; their icons come from that component's `ic
 The resume CTA's `ArrowUpRight` comes from `ActionCallComponent`.
 
 ## On External Links
-LinkedIn, GitHub, and the resume PDF are the only places in the entire site using `target="_blank"`. This is intentional — they are genuine external destinations and are documented here to justify the exception.
+This section's LinkedIn, GitHub, and resume PDF links use `target="_blank"`. This is intentional — they are genuine external destinations and are documented here to justify the exception. The projects section holds the site's only other `_blank` links (the project GitHub CTAs and the ClearForest\_ codex prototype).
 
 ## Dependencies
 - `TextLinkComponent` — the three email / LinkedIn / GitHub links
