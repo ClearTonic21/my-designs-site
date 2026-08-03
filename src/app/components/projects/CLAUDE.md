@@ -19,9 +19,10 @@ Showcases Eli's personal projects and indie game development. The most visually 
 - Card hover / scroll-in-view: `translateY(-3px)` lift + accent glow + metallic border swaps gold → teal (owned by `ArticleCardComponent`)
 
 ## Projects (display order)
-1. **ClearTonic Games_** — indie game design & development — image `assets/images/game_screenshot.png` — links to the GitHub profile
-2. **ClearForest_** — local-first knowledge-management PWA / codex builder — image `assets/images/clearforest-preview.png` — "Coming Soon" (`#` placeholder, no navigation)
-3. **This Portfolio Site** — AI-directed Angular 20 development — no image (placeholder shown) — links to source on GitHub
+1. **Canopy Trails** — trail/idea organizer — image `assets/images/app_screenshot.png` — "Coming Soon" (`#` placeholder, no navigation)
+2. **ClearTonic Games_** — indie game design & development — image `assets/images/game_screenshot.png` — links to the GitHub profile
+3. **ClearForest_** — local-first knowledge-management PWA / codex builder (`fullPage`) — image `assets/images/clearforest_preview.png` — "Preview the Design" → `clearforest-codex.html`, the self-contained design-system prototype served from `public/`, opened in a new tab
+4. **This Portfolio Site** — AI-directed Angular 20 development — image `assets/images/light-mode-portfolio.png` — links to source on GitHub
 
 ## Data Model
 ```typescript
@@ -50,8 +51,9 @@ Project cards may display an external link icon using Lucide for CTAs: `<lucide-
 
 ## Links
 Each card's CTA is an `app-text-link` (`icon="arrow"`, accent-colored) driven by `linkHref` /
-`linkLabel`. Real destinations (GitHub) open in a new tab — `target="_blank"` + auto
-`rel="noopener noreferrer"`; a `#` value passes no `target` (placeholder, e.g. "Coming Soon").
+`linkLabel`. Real destinations (GitHub, the ClearForest\_ codex prototype) open in a new tab —
+`target="_blank"` + auto `rel="noopener noreferrer"`; a `#` value passes no `target` (placeholder,
+e.g. "Coming Soon").
 
 ## Does Not
 - Contain modal or lightbox behavior

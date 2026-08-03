@@ -118,6 +118,7 @@ afterNextRender(() => {
 ├── public/
 │   ├── 404.html
 │   ├── Eli_Philpott_Resume.pdf
+│   ├── clearforest-codex.html
 │   └── favicon.ico
 └── src/
     ├── main.ts
@@ -225,7 +226,7 @@ afterNextRender(() => {
 - Business logic in `.ts` files only. Templates are declarative.
 - No inline `style="..."` attributes anywhere in templates.
 - Every component folder, `directives/`, and `services/` contains a `CLAUDE.md`.
-- Static files served at the URL root (PDF, favicon) go in `public/`. Component-consumed assets (images, icons) go in `src/assets/`.
+- Static files served at the URL root (PDF, favicon, the standalone `clearforest-codex.html` prototype) go in `public/`. Component-consumed assets (images, icons) go in `src/assets/`.
 
 ---
 
@@ -602,9 +603,10 @@ Cards: image area, highlight eyebrow, `.type-heading` title, `app-tag-list` pill
 
 Projects:
 
-1. **ClearTonic Games\_** — indie game design & development — `assets/images/game_screenshot.png` — "View on GitHub" → `https://github.com/ClearTonic21`
-2. **Canopy Trails** — trail/nature-spot information organizer — `assets/images/app_screenshot.png` — "Coming Soon" (`#` placeholder, no navigation)
-3. **This Portfolio Site** — AI-directed Angular 20 development — no image (placeholder shown) — "View Source" → GitHub
+1. **Canopy Trails** — trail/nature-spot information organizer — `assets/images/app_screenshot.png` — "Coming Soon" (`#` placeholder, no navigation)
+2. **ClearTonic Games\_** — indie game design & development — `assets/images/game_screenshot.png` — "View on GitHub" → `https://github.com/ClearTonic21`
+3. **ClearForest\_** — local-first knowledge-management PWA / codex builder (`fullPage`) — `assets/images/clearforest_preview.png` — "Preview the Design" → `clearforest-codex.html`, the self-contained design-system prototype served from `public/` at the build root, opened in a new tab
+4. **This Portfolio Site** — AI-directed Angular 20 development — `assets/images/light-mode-portfolio.png` — "View Source" → GitHub
 
 Real CTAs open in a new tab with `rel="noopener noreferrer"`; a `#` value renders a non-navigating placeholder.
 
@@ -617,7 +619,7 @@ Centered, flex column, `align-items: center`.
 - "Grab my Resume" — an `app-action-call` (`arrowIcon`, `target="_blank"`) opening `Eli_Philpott_Resume.pdf` in a new tab (served from `public/`)
 - Footer: `© 2026 Eli Philpott · ClearTonic Games_`
 
-The contact LinkedIn/GitHub links, the resume PDF, and the project GitHub CTAs are the only `target="_blank"` uses in the site, each with `rel="noopener noreferrer"`.
+The contact LinkedIn/GitHub links, the resume PDF, the project GitHub CTAs, and the ClearForest\_ codex prototype (`clearforest-codex.html`) are the only `target="_blank"` uses in the site, each with `rel="noopener noreferrer"`.
 
 ---
 
@@ -977,7 +979,7 @@ Comments explain _why_ something is done — never _what_ the code does. Aim for
 - Use `any` in TypeScript or `!` non-null assertions
 - Write inline styles (`style="..."`)
 - Hardcode hex color values in component SCSS files
-- Use `target="_blank"` on any link beyond the approved set: the resume PDF, the contact section's LinkedIn and GitHub links, and the project GitHub CTAs
+- Use `target="_blank"` on any link beyond the approved set: the resume PDF, the contact section's LinkedIn and GitHub links, the project GitHub CTAs, and the ClearForest\_ codex prototype (`clearforest-codex.html`)
 - Use CSS Grid — use Flexbox
 - Write desktop-first media queries — always mobile-first (`min-width`)
 - Add sections not listed in Section 6 without being asked
